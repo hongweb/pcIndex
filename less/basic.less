@@ -1,0 +1,131 @@
+@charset "utf-8";
+@import url("variable");
+@import url("common");
+
+
+.wrapper{
+	.left{
+		.lf();
+	}
+	.right{
+		.rf();
+	}
+	nav{
+		width: 100%;
+		@{bg}:@font-c + 197;
+		.height(50px);
+		position: fixed;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		border:1px solid (@font-c + 180);
+		.content{
+			&:after{
+				.clear-both();
+			}
+			width: 100%;
+			max-width: 980px;
+		    margin:0 auto;
+		    img{
+		    	vertical-align: middle;
+		    }
+		    li{
+		    	.lf();
+		    	padding:0 20px;
+		    	span{
+		    		font-size: 17px;
+		    		padding: 5px;
+		    		cursor: pointer;
+					@{c}:@font-c + 68;
+		    	}
+		    	&:hover span{
+					@{c}:@font-c;
+			    }
+		    	&.current{
+		    		span{
+		    			@{c}:#2a3789;
+		    			border-@{b}:4px solid #2a3789;
+		    		}
+		    	}
+		    }
+		}
+		
+	}
+	.banner{
+		padding-@{t}:50px;
+		padding-@{b}:40px;
+		img{
+			width: 100%;
+			.block();
+			vertical-align: middle;
+		}
+	}
+	.textContent{
+		@{w}:90%;
+		max-width: 800px;
+		margin: 100px auto 0 auto;
+		h1{
+			font-size: 18px;
+			.height(18px);
+		    border-left: 5px solid #2a3789;
+		    text-indent: 0.5em;
+		    @{c}:#2a3789;
+		}
+		p{
+			font-size: 14px;
+		}
+	}
+	.detail{
+		max-width:980px;
+		margin:0 auto;
+		ul{
+			padding: 100px 0;
+			&:after{
+				.clear-both();
+			}
+			li{
+				.lf();
+				@{w}:32%;
+				margin-@{r}:2%;
+				border:1px solid #dedede;
+				box-sizing: border-box;
+				.txt-center();
+				&:last-child{
+					margin-@{r}:0;
+				}
+				img{
+					width:100%;
+				}
+				h3{
+					font-weight: normal;
+					font-size: 18px;
+				}
+				p{
+					font-size: 14px;
+					@{c}:@font-c + 102;
+				}
+			}
+		}
+	}
+
+	.footer{
+		    .txt-center();
+		    @{bg}: @font-c + 185;
+		    @{w}: 100%;
+		    @{c}: @font-c + 102;
+		    .height(40px);
+		    box-sizing: border-box;
+		    position: fixed;
+		    bottom: 0;
+		    a{
+		    	@{c}: @font-c + 102;
+		    }
+		    img{
+		    	@{w}: 18px;
+    			margin-top: -5px;
+		    }
+	}
+}
